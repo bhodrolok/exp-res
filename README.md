@@ -3,7 +3,7 @@
 # Expressive Resume
 
 A beautiful resume/cover letter LaTeX template pair that are extraordinarily
-easy to use.
+easy to use. Made using [J. Hale's Expressive Resume](https://github.com/thehale/expressive-resume)
 
 <!-- BADGES -->
 [![](https://badgen.net/github/license/thehale/expressive-resume)](https://github.com/thehale/expressive-resume/blob/master/LICENSE)
