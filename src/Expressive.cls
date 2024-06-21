@@ -95,35 +95,40 @@
 }
 
 %% ----- Custom Commands -----
+
+% Misc
+\newcommand{\pipe}{\ensuremath{\vert}} % i.e. '|'
+
 % Contact Information
 \newcommand{\nametitle}[2]{%
     { \Huge #1 \textsc{#2} }
-
+    
     \medskip
 }
 \newcommand{\contactseparator}{
     \quad\textbar\quad\hspace{1pt}
 }
+\newcommand{\website}[1]{\faIcon{house-user} \href{https://#1/}{#1}}
 \newcommand{\email}[1]{\faIcon{envelope} \href{mailto:#1}{#1}}
 \newcommand{\phone}[1]{\faIcon{phone-alt} \href{tel:+1-#1}{#1}}
 \newcommand{\github}[1]{\faIcon{github} \href{https://github.com/#1/}{#1}}
 \newcommand{\linkedin}[1]{\faIcon{linkedin} \href{https://linkedin.com/in/#1/}{#1}}
-\newcommand{\location}[1]{\faIcon{map-marker-alt} #1}
+\newcommand{\residence}[1]{\faIcon{map-marker-alt} #1}
+
 % Experience/Achievements
+
 \newcommand{\tech}[1]{\textbf{#1}}
+% Usage: \role{JobTitle}{Company} => Company -- JobTitle
 \newcommand{\role}[2]{\textbf{#2 | \emph{#1}}}
+% Usage: \altrole{Company}{JobTitle} => JobTitle in Company
+\newcommand{\altrole}[2]{\textbf{#1 in \emph{#2}}}
+% Usage: \subrole{}
 \newcommand{\subrole}[4]{\emph{#1 (#2 - #3)} #4}
+% Usage: \tenure{StartDate}{EndDate} => StartDate - EndDate
 \newcommand{\tenure}[2]{\textsc{#1} - \textsc{#2}}
-\newcommand{\achievement}[1]{%
-    \begin{itemize}
-        \small{\item #1}
-    \end{itemize}
-}
-\newcommand{\experience}[5]{%
-    \noindent\role{#1}{#2}\hfill\tenure{#3}{#4}\par
-    #5
-    \vspace{7pt}
-}
+% Usage: \parttenure{Date}
+\newcommand{\parttenure}[1]{\textsc{#1}}
+\newcommand{\location}[1]{\emph{#1}}
 
 %% ----- Four Required Configurations -----
 \renewcommand{\normalsize}{\fontsize{10pt}{12pt}\selectfont}
